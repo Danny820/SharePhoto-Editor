@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_finish_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
+    tools:context="com.allyouneedapp.palpicandroid.FinishUpActivity">
+    <RelativeLayout
+        android:id="@+id/layout_nav_finish"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Button
+            android:id="@+id/btn_back_finish"
+            android:layout_width="60dp"
+            android:background="@color/colorClear"
+            android:text="@string/back"
+            android:textColor="@color/colorNavItemTextPressed"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/finish_up"
+            android:textColor="@color/colorWhite"
+            android:textSize="9pt"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn_dismiss_finish"
+            android:layout_width="60dp"
+            android:text="@string/dismiss"
+            android:background="@color/colorClear"
+            android:textColor="@color/colorNavItemText"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"/>
+        <Button
+            android:id="@+id/btn_save_share_finish"
+            android:layout_width="60dp"
+            android:text="@string/save_share"
+            android:background="@color/colorClear"
+            android:textColor="@color/colorNavItemText"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_edit_finish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="90dp"
+        android:layout_above="@+id/layout_bottom_bar_finish"
+        android:layout_below="@+id/layout_nav_finish">
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView_sticker"
+        android:layout_above="@+id/layout_bottom_bar_finish"
+        android:layout_below="@+id/layout_nav_finish"
+        android:visibility="gone"
+        android:numColumns="2"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridView>
+    <!--<search bar>-->
+    <LinearLayout
+        android:id="@+id/layout_list"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_nav_finish"
+        android:layout_above="@+id/layout_bottom_bar_finish"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+        </android.support.v7.widget.SearchView>
+
+        <ListView
+            android:id="@+id/listView_font"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_font_color_finish"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_above="@+id/layout_bottom_bar_finish"
+        android:background="@color/colorBarMain">
+        <ImageButton
+            android:id="@+id/btn_bar_font_finish"
+            android:src="@mipmap/fontedit"
+            android:scaleType="centerInside"
+            android:background="@color/colorFontButton"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bar_color_finish"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_recent_finish"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_above="@+id/layout_bottom_bar_finish"
+        android:background="@color/colorBarMain">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Recent"
+            android:paddingLeft="10dp"
+            android:background="@color/colorItem28"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bar_recent_finish"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_bar_finish"
+        android:layout_width="match_parent"
+        android:background="@color/colorBackgroundMain"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/btn_filter_finish"
+            android:background="@color/colorClear"
+            android:src="@mipmap/filter"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="5pt"
+            android:layout_marginBottom="5dp"
+            android:layout_alignBaseline="@+id/btn_rotate"
+            android:textColor="@color/colorWhite"/>
+
+        <ImageButton
+            android:id="@+id/btn_addsticker_finish"
+            android:background="@color/colorClear"
+            android:src="@mipmap/addsticker"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Add sticker"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textSize="5pt"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"/>
+        <ImageButton
+            android:id="@+id/btn_add_word_finish"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorClear"
+            android:src="@mipmap/addword"
+            android:padding="5dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Add word"
+            android:textSize="5pt"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_input_text"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+            android:id="@+id/text_input_text"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toLeftOf="@+id/btn_input_text_ok"
+            android:layout_toStartOf="@+id/btn_input_text_ok" />
+        <Button
+            android:id="@+id/btn_input_text_ok"
+            android:layout_width="60dp"
+            android:text="OK"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_save_share_finish"
+        android:background="@mipmap/dim_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_saved_image_finish"
+                android:textColor="@color/colorWhite"
+                android:text="picture has been saved to your photo album"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/text_shared_your_friend_finish"
+                android:layout_below="@+id/text_saved_image_finish"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:text = "SHARE WITH YOUR FRIENDS"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <ImageButton
+                android:id="@+id/btn_fb_finish"
+                android:layout_below="@+id/text_shared_your_friend_finish"
+                android:background="@mipmap/fbgiftpage"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageButton
+                android:id="@+id/btn_insta_finish"
+                android:layout_below="@+id/text_shared_your_friend_finish"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/instagram"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageButton
+                android:id="@+id/btn_email_finish"
+                android:layout_below="@+id/text_shared_your_friend_finish"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/email_white"
+                android:layout_width="50dp"
+                android:layout_height="45dp" />
+            <ImageButton
+                android:id="@+id/btn_suggestSticker_finish"
+                android:layout_below="@+id/text_or_finish"
+                android:background="@mipmap/sticker_white"
+                android:layout_width="80dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_alignBottom="@+id/btn_suggestSticker_finish"
+                android:textColor="@color/colorWhite"
+                android:text="Suggest Sticker"
+                android:gravity="bottom"
+                android:layout_width="100dp"
+                android:layout_height="20dp" />
+            <ImageButton
+                android:id="@+id/btn_start_over_finish"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/text_or_finish"
+                android:background="@mipmap/startover"
+                android:layout_marginRight="10dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_alignBottom="@+id/btn_start_over_finish"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorWhite"
+                android:text="     Start Over"
+                android:gravity="bottom|center"
+                android:layout_width="100dp"
+                android:layout_height="20dp" />
+            <TextView
+                android:id="@+id/text_or_finish"
+                android:layout_below="@+id/btn_email_finish"
+                android:text="OR"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="60dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_register_login_finish"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
+
+        <EditText
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/text_email_finish"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:hint="E-mail address"/>
+
+        <EditText
+            android:id="@+id/text_password_finish"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/text_email_finish"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="20dp"
+            android:hint="Password"/>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/text_password_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_register_finish"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:background="@color/colorItem8"
+                android:shadowRadius="20"
+                android:text="register"/>
+            <Button
+                android:id="@+id/btn_login_finish"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="Log in"
+                android:background="@color/colorItem8"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/btn_cancel_finish"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="Cancel"
+                android:background="@color/colorItem8"
+                android:layout_alignParentRight="true"/>
+            <ImageButton
+                android:id="@+id/btn_fb_login_finish"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/fblogin"
+                android:background="@color/colorClear"
+                android:layout_alignParentBottom="true"/>
+            <ImageButton
+                android:id="@+id/btn_google_finish"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/glogin"
+                android:scaleType="fitCenter"
+                android:background="@color/colorClear"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="or connect with your account"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_suggest_sticker_logged_finish"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit_text_suggest_sticker_finish"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorWhite"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:id="@+id/btn_suggest_sticker_finish"
+            android:layout_below="@+id/edit_text_suggest_sticker_finish"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/colorItem36"
+            android:text="Suggest"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/btn_suggest_sticker_cancel_finish"
+            android:layout_below="@+id/edit_text_suggest_sticker_finish"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="70dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorItem36"
+            android:text="Cancel"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

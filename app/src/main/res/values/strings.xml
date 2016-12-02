@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PalPic</string>
+    <string name="back">Back</string>
+    <string name="crop">Crop</string>
+    <string name="next">Next</string>
+    <string name="custom">CUSTOM</string>
+    <string name="square">SQUARE</string>
+    <string name="ratio23">2:3</string>
+    <string name="ratio34">3:4</string>
+    <string name="ratio35">3:5</string>
+    <string name="ratio916">9:16</string>
+    <string name="ratio32">3:2</string>
+    <string name="ratio43">4:3</string>
+    <string name="ratio53">5:3</string>
+    <string name="ratio169">16:9</string>
+    <string name="filter">Filter</string>
+    <string name="finish_up">FinishUp</string>
+    <string name="save_share">Save Share</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="facebook_app_id">1838829683012532</string>
+</resources>

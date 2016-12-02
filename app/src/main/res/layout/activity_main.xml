@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBackgroundMain"
+    tools:context="com.allyouneedapp.palpicandroid.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/imageView_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/gridView_album">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/logo"
+            android:padding="30dp"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView_album"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/activity_main_bottom_bar"
+        android:numColumns="4">
+    </GridView>
+
+    <ImageView
+        android:id="@+id/dim_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/dim_popup"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView_logo"
+        android:layout_above="@+id/activity_main_bottom_bar">
+        <ImageButton
+            android:id="@+id/btn_suggestSticker_main"
+            android:src="@mipmap/suggeststicker"
+            android:background="@color/colorClear"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:text="Suggest Sticker"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignStart="@+id/btn_suggestSticker_main"
+            android:textSize="5pt"
+            android:layout_marginTop="80dp"
+            android:layout_width="105dp"
+            android:layout_height="30dp" />
+
+        <ImageButton
+            android:id="@+id/btn_fanpage"
+            android:src="@mipmap/fanpage"
+            android:background="@color/colorClear"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:text="Fanpage"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignStart="@+id/btn_fanpage"
+            android:textSize="5pt"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="105dp"
+            android:layout_height="30dp" />
+
+        <ImageButton
+            android:id="@+id/btn_follow_us"
+            android:background="@color/colorClear"
+            android:scaleType="fitXY"
+            android:src="@mipmap/followus"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:text="Fanpage"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignStart="@+id/btn_follow_us"
+            android:textSize="5pt"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="105dp"
+            android:layout_height="30dp" />
+
+        <ImageButton
+            android:id="@+id/btn_email"
+            android:background="@color/colorClear"
+            android:scaleType="fitXY"
+            android:src="@mipmap/email"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/imageView_logo"
+        android:layout_above="@+id/activity_main_bottom_bar">
+        <ImageButton
+            android:id="@+id/btn_tell_friend"
+            android:src="@mipmap/tellfriend"
+            android:scaleType="fitXY"
+            android:background="@color/colorClear"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:text="Tell Friend"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignStart="@+id/btn_tell_friend"
+            android:textSize="5pt"
+            android:layout_marginTop="80dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp" />
+        <ImageButton
+            android:id="@+id/btn_sign_out"
+            android:background="@color/colorClear"
+            android:src="@mipmap/signout"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:text="Sign-Out"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignStart="@+id/btn_sign_out"
+            android:textSize="5pt"
+            android:layout_marginTop="80dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp" />
+        <ImageButton
+            android:id="@+id/btn_rate"
+            android:background="@color/colorClear"
+            android:src="@mipmap/rate"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:text="Rate The App"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignStart="@+id/btn_rate"
+            android:layout_marginBottom="20dp"
+            android:textSize="5pt"
+            android:layout_alignParentBottom="true"
+            android:layout_width="100dp"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBarMain"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <ImageButton
+                android:id="@+id/main_bar_btn_album"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/albums"
+                android:background="@color/colorClear"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/main_bar_btn_camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/camera"
+                android:background="@color/colorClear"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/main_bar_btn_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/more"
+                android:background="@color/colorClear"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/main_bar_btn_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/contactus"
+                android:background="@color/colorClear"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView_albumName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bgaa"
+        android:layout_alignParentLeft="true"
+        android:divider="@null"
+        android:visibility="gone"
+        android:layout_above="@+id/activity_main_bottom_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/layout_register_login_main"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/text_email_main"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:hint="E-mail address"/>
+
+        <EditText
+            android:id="@+id/text_password_main"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/text_email_main"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="20dp"
+            android:hint="Password"/>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/text_password_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_register_main"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:background="@color/colorItem8"
+                android:shadowRadius="20"
+                android:text="register"/>
+            <Button
+                android:id="@+id/btn_login_main"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="Log in"
+                android:background="@color/colorItem8"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/btn_cancel_main"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="Cancel"
+                android:background="@color/colorItem8"
+                android:layout_alignParentRight="true"/>
+            <ImageButton
+                android:id="@+id/btn_fb_login_main"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/fblogin"
+                android:background="@color/colorClear"
+                android:layout_alignParentBottom="true"/>
+            <ImageButton
+                android:id="@+id/btn_google_main"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/glogin"
+                android:scaleType="fitCenter"
+                android:background="@color/colorClear"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="or connect with your account"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_suggest_sticker_logged_main"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit_text_suggest_sticker_main"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorWhite"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:id="@+id/btn_suggest_sticker_main"
+            android:layout_below="@+id/edit_text_suggest_sticker_main"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/colorItem36"
+            android:text="Suggest"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/btn_suggest_sticker_cancel_main"
+            android:layout_below="@+id/edit_text_suggest_sticker_main"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="70dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorItem36"
+            android:text="Cancel"
+            android:textColor="@color/colorWhite"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
